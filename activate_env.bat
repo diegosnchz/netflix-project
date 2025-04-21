@@ -1,12 +1,34 @@
 @echo off
-REM activate_env.bat: Activate the Python virtual environment
-SETLOCAL
-REM Resolve the directory of this script (with trailing backslash)
+ECHO ===================================================
+ECHO      Activando el entorno virtual de Python
+ECHO ===================================================
+
 SET "SCRIPT_DIR=%~dp0"
-REM Check for the activation script in Scripts folder
-IF EXIST "%SCRIPT_DIR%Scripts\activate.bat" (
-    CALL "%SCRIPT_DIR%Scripts\activate.bat"
-) ELSE (
-    ECHO Activation script not found in "%SCRIPT_DIR%Scripts".
+SET "ACTIVATE_SCRIPT=%SCRIPT_DIR%Scripts\activate.bat"
+
+IF NOT EXIST "%ACTIVATE_SCRIPT%" (
+    ECHO ERROR: No se encontro el script de activacion en:
+    ECHO %ACTIVATE_SCRIPT%
+    ECHO.
+    ECHO Verifica que la estructura del entorno virtual sea correcta.
+    GOTO :END
 )
-ENDLOCAL
+
+ECHO Ejecutando: %ACTIVATE_SCRIPT%
+CALL "%ACTIVATE_SCRIPT%"
+
+IF %ERRORLEVEL% NEQ 0 (
+    ECHO ERROR: No se pudo activar el entorno virtual.
+    ECHO Codigo de error: %ERRORLEVEL%
+) ELSE (
+    ECHO.
+    ECHO Entorno virtual activado correctamente!
+    ECHO Python: %SCRIPT_DIR%Scripts\python.exe
+    ECHO.
+    ECHO Usa 'deactivate' para salir del entorno virtual.
+)
+
+:END
+ECHO.
+ECHO Presiona cualquier tecla para cerrar esta ventana...
+PAUSE > NUL
