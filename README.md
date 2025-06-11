@@ -1,30 +1,68 @@
-# Análisis del Catálogo de Netflix con Pandas
+# Análisis Exploratorio de Datos - Netflix Dataset
 
-## Descripción
-Este proyecto es un análisis exploratorio de datos (EDA) del catálogo de títulos de Netflix. El objetivo es practicar las habilidades de limpieza, transformación y análisis de datos utilizando Python y la librería Pandas, partiendo de un dataset público de Kaggle.
+## Descripción del Proyecto
 
-## Objetivos del Análisis
-El proyecto sigue una serie de preguntas guía para limpiar y transformar los datos, preparándolos para un análisis más profundo. Las tareas realizadas incluyen:
-- Manejo de valores nulos y faltantes (reemplazando textos como "Not Given").
-- Eliminación de filas y columnas irrelevantes.
-- Conversión de tipos de datos (de `float` a `int`).
-- Creación de nuevas columnas a partir de datos existentes (extracción del género principal).
+Este proyecto presenta un **Análisis Exploratorio de Datos (EDA)** completo del catálogo de Netflix, demostrando habilidades en ciencia de datos y visualización con Python.
 
-## Dataset
-El dataset utilizado es "Netflix Movies and TV Shows" y fue obtenido de [Kaggle](https://www.kaggle.com/datasets/shivamb/netflix-shows).
+## 🔗 Ver Análisis Online
 
-## Proceso de Limpieza y Transformación
-- **Valores Nulos:** Se identificaron y manejaron 2588 valores faltantes en la columna `director` y 287 en `country`, reemplazándolos con el formato estándar `NaN` o la moda (valor más frecuente), respectivamente.
-- **Columnas Irrelevantes:** Se eliminó la columna `show_id` por no aportar valor analítico.
-- **Tipos de Datos:** La columna `release_year` se convirtió de `float` a `int` para un manejo más adecuado.
-- **Feature Engineering:** Se creó la columna `genero_principal` extrayendo la primera categoría de la columna `listed_in` para simplificar el análisis de géneros.
+**[📊 Ver el análisis completo en vivo](https://diego-netflix-analysis.github.io)**
 
-## Herramientas Utilizadas
-- **Lenguaje:** Python 3
-- **Librerías:** Pandas, NumPy
-- **Entorno:** Jupyter Notebook dentro de Visual Studio Code
+## Tecnologías Utilizadas
 
-## Cómo Usar este Repositorio
-1. Clona el repositorio.
-2. Asegúrate de tener las librerías necesarias (`pip install pandas numpy`).
-3. Abre y ejecuta el archivo `analysis.ipynb` en un entorno de Jupyter.
+- **Python** - Lenguaje de programación principal
+- **Pandas** - Manipulación y análisis de datos
+- **NumPy** - Operaciones numéricas
+- **Matplotlib** - Visualizaciones básicas
+- **Seaborn** - Visualizaciones estadísticas avanzadas
+- **Jupyter Notebook** - Entorno de desarrollo
+
+## Características del Análisis
+
+### 🧹 Limpieza de Datos
+- Identificación y tratamiento de valores faltantes
+- Conversión de tipos de datos apropiados
+- Creación de nuevas variables temporales
+- Extracción y normalización de géneros
+
+### 📊 Análisis Exploratorio
+- Distribución de contenido (Películas vs Series)
+- Análisis de géneros más populares
+- Directores más prolíficos
+- Análisis geográfico de producción
+- Tendencias temporales de contenido
+
+### 📈 Visualizaciones
+- Gráficos de barras y horizontales
+- Análisis temporal con gráficos de línea
+- Heatmaps para patrones complejos
+- Histogramas de distribución
+- Subplots combinados para insights múltiples
+
+## Resultados Clave
+
+- **Tipo de contenido**: Las películas dominan el catálogo
+- **Género principal**: International Movies lidera la producción
+- **País productor**: Estados Unidos encabeza la creación de contenido
+- **Tendencia temporal**: Crecimiento exponencial desde 2015
+
+## Estructura del Proyecto
+
+```
+netflix-project/
+│
+├── analysis.ipynb          # Notebook principal con el análisis
+├── netflix_titles.csv      # Dataset de Netflix
+├── index.html             # Versión web del análisis
+└── README.md              # Documentación del proyecto
+```
+
+## Cómo Ejecutar Localmente
+
+1. Clonar el repositorio
+2. Instalar dependencias: `pip install pandas numpy matplotlib seaborn jupyter`
+3. Abrir el notebook: `jupyter notebook analysis.ipynb`
+
+---
+
+*Este proyecto forma parte de mi portfolio de ciencia de datos, demostrando competencias en análisis exploratorio, visualización de datos y storytelling con datos.*
