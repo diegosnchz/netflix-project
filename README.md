@@ -6,7 +6,7 @@ Este proyecto presenta un **Análisis Exploratorio de Datos (EDA)** completo del
 
 ## 🔗 Ver Análisis Online
 
-**[📊 Ver el análisis completo en vivo](https://diego-netflix-analysis.github.io)**
+**[📊 Ver el análisis completo en vivo](index.html)**
 
 ## Tecnologías Utilizadas
 
